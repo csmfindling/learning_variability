@@ -57,7 +57,8 @@ If you have any questions on this code or related, please do not hesitate to con
 
 <h3> References </h3>
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+1. Item 1
+1. Item 2
+1. Item 3
+   1. Item 3a
+   1. Item 3b
