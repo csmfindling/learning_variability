@@ -68,9 +68,14 @@ Do inference by specifying the wanted parameters. Then get MAP and smoothing tra
 ```
 s_obj.do_inference(noise=1, apply_rep = 1, apply_weber = 1, condition=1, beta_softmax=-1, show_progress=True)  
 s_obj.get_map() 
+```
+If one wants the smoothing trajectories (however this function is very slow, call it a day if you launch it):
+
+```
 s_obj.get_trajectory()  
 ```
-Plot and save results
+
+Save results
 ```
 s_obj.save(directory='') 
 ```
