@@ -69,7 +69,7 @@ Do inference by specifying the wanted parameters. Then get MAP. The arguments of
 * apply_rep = 1/0
 * apply_weber = 1/0
 * condition = 1/0 : if noise = 1 , condition = observational_noise (noise in forced trials), if noise = 0, condition = apply_weber_decision_noise (weber-scaled softmax)
-* beta_softmax = -1/3 : softmax/argmax. If beta_softmax is set to 3, the value of the softmax parameter is 10^3
+* beta_softmax = -1/3 : softmax/argmax. If beta_softmax is set to -1, there is a softmax inferred, else if it is set to 3, the value of the softmax parameter is 10^3
 * temperature = temperature prior or beta prior. When inferring the beta, do we infer beta ~  U([0;100]) or T=1/beta ~ U([0;1]). By default, we infer T=1/beta ~ U([0;1])
 ```
 s_obj.do_inference(noise=1, apply_rep = 1, apply_weber = 1, condition=1, beta_softmax=-1, show_progress=True)  
