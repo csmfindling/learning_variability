@@ -31,6 +31,7 @@ Architecture of the code:
 <h3> Code compilation </h3>
 
 To compile the c++ libraries, you will need to install the boost c++ library, version 1.59 - https://www.boost.org/users/history/version_1_59_0.html
+
 Once downloaded, open the compile_c.sh file. Modify it by adding your boost library path. Then launch ./compile_c.sh.
 
 
