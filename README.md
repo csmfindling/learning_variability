@@ -57,10 +57,24 @@ If you have any questions on this code or related, please do not hesitate to con
 
 <h3> References </h3>
 
-<div id="container">
-    <header></header>
-    <main>
-        <section height=50%>test</section> 
-        <section class="half">t</section>
-    </main>
-</div>
+<div id="upleft">a</div>
+<div id="upright">b</div>
+<div id="below">c</div>
+
+#upleft { 
+   width:100px; 
+   height: 300px; 
+   background:red; float:left; 
+}
+
+#upright { 
+   width:300px; 
+   height:200px; 
+   background:blue; 
+   float:left
+}
+#below { 
+   height:300px; 
+   width:400px; 
+   background:green 
+}
