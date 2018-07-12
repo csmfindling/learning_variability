@@ -57,9 +57,25 @@ If you have any questions on this code or related, please do not hesitate to con
 
 <h3> References </h3>
 
-1. Item 1
-1. Item 2
-1. Item 3
+* lib_c ** C files **
+  * smc2
+  * state_estimation
+  * useful_functions
+* twoq_value_1alpha
+  * ibis
+  * smc2
+  * state_estimation
+  * useful_functions
+* twoq_value_2alpha
+  * ibis
+  * smc2
+  * state_estimation
+  * useful_functions
+
+
+
+
+
    1. Item 3a
    1. Item 3b
 
