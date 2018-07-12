@@ -106,7 +106,7 @@ class smc_object():
 			- noise = 1/0
 			- apply_rep = 1/0
 			- apply_weber = 1/0
-			- condition = 1/0 : if noise = 1 , condition = observational_noise, if noise = 0, condition = apply_weber_decision_noise
+			- condition = 1/0 : if noise = 1 , condition = observational_noise (noise in forced trials), if noise = 0, condition = apply_weber_decision_noise (weber-scaled softmax)
 			- beta_softmax = -1/3 : softmax/argmax. If beta_softmax is set to 3, the value of the softmax parameter is 10**3 = 1000
 			- temperature = temperature prior or beta prior. When inferring the beta, do we infer beta ~  U([0;100]) or T=1/beta ~ U([0;1]). 
 							By default, we infer T=1/beta ~ U([0;1])
@@ -276,18 +276,6 @@ class smc_object():
 		update_noise = np.abs(self.smoothing[:,:-1] - self.smoothing_mu[:,1:])
 		self.corr    = pearsonr(np.mean(added_noise, axis=0), np.mean(update_noise, axis=0))[0]
 		print 'correlation between update and noise is {0}'.format(self.corr)
-
-	def plot(self, key=['parameters', 'trajectory']):
-		''' plot method'''
-		if self.oneq_value == 1:
-			if not self.inference_done:
-				return SyntaxError('no inference done')
-			elif self.inference_done and self.got_traj:
-				plot_functions.plot_res(self, key)
-			else:
-				plot_functions.plot_res(self, 'parameters')
-		else:
-			raise NotImplementedError
 
 	def load_results(self, information):
 		''' load results called in the constructor. As indicated up above, it loads all the items created by the save method'''
