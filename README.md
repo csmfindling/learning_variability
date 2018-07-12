@@ -37,29 +37,13 @@ Once downloaded, open the compile_c.sh file. Modify it by adding your boost libr
 
 <h3> Code instructions </h3>
 
-	Parameters:
-	- a dictionary `info' with keys:
-		+ actions    : subjects actions (0 or 1)
-		+ blocks_idx : array of 0 of same length then the actions with a 1 at the beginning of every new block
-		+ choices    : whether the choices was a subject choice (1) or a forced choice (0) ; by default, array of ones us assumed
-		+ subj_idx   : subject id. Important for saving purposes
-		+ rewards    : rewards of shape [2, nbOfTrials]. These should be normalised between 0 and 1. 
-					If partial, the learning rule of the unchosen option will override the unchosen reward
-	- complete = 1/0      : whether we are in a complete or partial feedback
-	- leaky    = -1/0/1   : when complete, nothing to do, leaky=-1. In partial, one must choose between 
-						  leaky model or anticorrelated model leaky = 1/0 in partial feedback : if leaky == 1, 
-						  then the regression to the mean model will be applied 
-						  elif leaky == 0 then the 1 - R model will the applied else an error will be raise
-	- onload = True/False : If onload is set to True, the dictionary input expects much more variables (see load_results function). 
-						   Essentially, it expects the contents of the output of the save function
-         
 The first thing you will want to do is create an smc object. The constructor is the parameters:
 1. A dictionary with keys
- 1. *actions*, of shape (T) speciying the actions of the subject - (0 or 1). T is the total number of trials
- 1. *rewards*, of shape (2, T) with T the length of the experiment. These should be normalised between 0 and 1. In the partial case, the learning rule of the unchosen option will override the unchosen reward.
- 1. *subject_idx*, an integer speciying the index of the subject. This is for saving purposes. By default, it will be 0
- 1. *choices* , of shape (T) speciying whether the trials was a choice or a forced trial. By default, it will be np.ones(T), assuming thus there are no forced trials
- 1. *blocks_idx*, of shape (T), specifying the beginning of each blocks. If it is the beginning of a new block, a 1 should be present. By default, it will be set to blocks_idx = np.zeros(T), with blocks_idx[0]= 1, assuming thus only one block.
+ 	1. *actions*, of shape (T) speciying the actions of the subject - (0 or 1). T is the total number of trials
+ 	1. *rewards*, of shape (2, T) with T the length of the experiment. These should be normalised between 0 and 1. In the partial case, the learning rule of the unchosen option will override the unchosen reward.
+	 1. *subject_idx*, an integer speciying the index of the subject. This is for saving purposes. By default, it will be 0
+	 1. *choices* , of shape (T) speciying whether the trials was a choice or a forced trial. By default, it will be np.ones(T), assuming thus there are no forced trials
+ 	1. *blocks_idx*, of shape (T), specifying the beginning of each blocks. If it is the beginning of a new block, a 1 should be present. By default, it will be set to blocks_idx = np.zeros(T), with blocks_idx[0]= 1, assuming thus only one block.
 1. A *complete* argument in (1/0) specifying whether you are in the complete or feedback setting
 1. A *leaky* argument in (-1/0/1) specifying the learning rule in the partial case. When complete, there is nothing to do, leaky=-1. In partial, one must choose between the leaky model or anticorrelated model leaky = 1/0; if leaky == 1, then the regression to the mean model will be applied; elif leaky == 0 then the 1 - R model will the applied else an error will be raise
 1. A *onload* argument = True/False : If onload is set to True, the dictionary input expects much more variables (see load_results function). Essentially, it expects the contents of the output of the save function
