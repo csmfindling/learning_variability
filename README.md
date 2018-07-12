@@ -11,21 +11,22 @@ Briefly, the paper investigates the presence of variability in learning and stud
 This code offers flexible implementations in the case of Q-learning algorithms. Four big types of Q-learning algorithms are developped, obtained with combining noiseless and noisy algorithms with 1 or 2 Q-values. 
 
 Architecture of the code:
+* smc_object.py - *main file, creates an object which gives access to all inference and smoothing functions*
 * lib_c - *C files*
   * smc2 - *C files for all smc2 procedures*
   * state_estimation - *C files for all smoothing procedures*
   * useful_functions - *file for all used C auxiliary functions*
-* twoq_value_1alpha
-  * ibis
-  * smc2
-  * state_estimation
-  * useful_functions
-* twoq_value_2alpha
-  * ibis
-  * smc2
-  * state_estimation
-  * useful_functions
-
+* twoq_value_1alpha - *python files for smc procedures in the case of a unique learning rate*
+  * ibis - *python files for smc procedures in the case of noise-free RL*
+  * smc2 - *python files for smc procedures in the case of noisy RL*
+  * state_estimation - *python files for smoothing procedures*
+  * useful_functions - *python files with all used auxiliary functions*
+* twoq_value_2alpha - *python files for smc procedures in the case of distinct learning rates*
+  * ibis - *python files for smc procedures in the case of noise-free RL*
+  * smc2 - *python files for smc procedures in the case of noisy RL*
+  * state_estimation - *python files for smoothing procedures*
+  * useful_functions - *python files with all used auxiliary functions*
+  * simulation - *python files with simulation procedures. Attention : this file is used for simulating also the one learning rate case.
 
 Multiple features are offered within the code. A first very important thing to understand when using this code is how to put data in the smc_object class. The constructor is expecting a dictionary with keys:
 <ul>
