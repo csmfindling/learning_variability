@@ -28,6 +28,14 @@ Architecture of the code:
   * useful_functions - *python files with all used auxiliary functions*
   * simulation - *python files with simulation procedures. Attention : this file is used for simulating also the one learning rate case.
 
+<h3> Code compilation </h3>
+
+To compile the c++ libraries, you will need to install the boost c++ library, version 1.59 - https://www.boost.org/users/history/version_1_59_0.html
+Once downloaded, open the compile_c.sh file. Modify it by adding your boost library path. Then launch ./compile_c.sh.
+
+
+<h3> Code instructions </h3>
+
 Multiple features are offered within the code. A first very important thing to understand when using this code is how to put data in the smc_object class. The constructor is expecting a dictionary with keys:
 <ul>
   <li>'rewards' of shape (2, T) with T the length of the experiment. For partial cases, the unknown reward will be filled accordingly, (for examples, with zeros)</li>
@@ -36,12 +44,6 @@ Multiple features are offered within the code. A first very important thing to u
   <li>'choices', of shape (T) speciying whether the trials was a choice or a forced trial. By default, it will be np.ones(T), assuming thus there are no forced trials</li>
   <li>'blocks_idx', of shape (T), specifying the beginning of each blocks. If it is the beginning of a new block, a 1 should be present. By default, it will be set to idx_b = np.zeros(T), with idx_b[0]= 1, assuming thus only one block </li>
 </ul>
-
-<h3> Code compilation </h3>
-
-To compile the c++ libraries, open the compile_c.sh file. Modify it by adding your boost library path. Then launch ./compile_c.sh
-
-<h3> Code instructions </h3>
 
 A simple example is given below. First, import the smc object file
 
