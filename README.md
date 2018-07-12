@@ -1,9 +1,10 @@
-<h1> Noisy Inference </h1>
+<h1> Computational variability in reinforcement learning drives exploratory decisions in volatile environments </h1>
 
-This is a project realised at Ecole Normale Supérieure under the supervision of Valentin Wyart and with collaborators Remi 
-Dromnelle, Vasilisa Skvortsova and Charles Findling.
+This is a project realised at Ecole Normale Supérieure by Vasilisa Skvortsova and Charles Findling under the supervisions of Valentin Wyart and Stefano Palminteri with collaborator Remi Dromnelle.
 
-<h3> Summary of the paper </h3>
+<h3> Link to the paper </h3>
+
+Briefly, the paper investigates the presence of variability in learning and studies its impact on behavior through computational modelling and neuroimaging procedures.
 
 <h3> Summary of the code </h3>
 
@@ -48,5 +49,3 @@ s_obj.save(directory='results/')
 
  <h3> References </h3>
 
-
-# learning_variability
