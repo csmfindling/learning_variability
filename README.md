@@ -60,7 +60,7 @@ If you have any questions on this code or related, please do not hesitate to con
 <div id="container">
     <header></header>
     <main>
-        <section class="half">test</section> 
+        <section height=50%>test</section> 
         <section class="half">t</section>
     </main>
 </div>
