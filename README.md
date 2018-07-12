@@ -10,6 +10,23 @@ Briefly, the paper investigates the presence of variability in learning and stud
 
 This code offers flexible implementations in the case of Q-learning algorithms. Four big types of Q-learning algorithms are developped, obtained with combining noiseless and noisy algorithms with 1 or 2 Q-values. 
 
+Architecture of the code:
+* lib_c **C files**
+  * smc2 **C files for all smc2 procedures**
+  * state_estimation **C files for all smoothing procedures**
+  * useful_functions **file for all used C auxiliary functions**
+* twoq_value_1alpha
+  * ibis
+  * smc2
+  * state_estimation
+  * useful_functions
+* twoq_value_2alpha
+  * ibis
+  * smc2
+  * state_estimation
+  * useful_functions
+
+
 Multiple features are offered within the code. A first very important thing to understand when using this code is how to put data in the smc_object class. The constructor is expecting a dictionary with keys:
 <ul>
   <li>'rewards' of shape (2, T) with T the length of the experiment. For partial cases, the unknown reward will be filled accordingly, (for examples, with zeros)</li>
@@ -57,29 +74,5 @@ If you have any questions on this code or related, please do not hesitate to con
 
 <h3> References </h3>
 
-* lib_c ** C files **
-  * smc2
-  * state_estimation
-  * useful_functions
-* twoq_value_1alpha
-  * ibis
-  * smc2
-  * state_estimation
-  * useful_functions
-* twoq_value_2alpha
-  * ibis
-  * smc2
-  * state_estimation
-  * useful_functions
 
 
-
-
-
-   1. Item 3a
-   1. Item 3b
-
-- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
