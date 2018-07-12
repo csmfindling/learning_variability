@@ -64,7 +64,7 @@ Then, create an smc_object by specifying arguments
 ```
 s_obj = smc_object(info=info, complete = 1)
 ```
-Do inference by specifying the wanted parameters. Then get MAP and smoothing trajectory
+Do inference by specifying the wanted parameters. Then get MAP,
 ```
 s_obj.do_inference(noise=1, apply_rep = 1, apply_weber = 1, condition=1, beta_softmax=-1, show_progress=True)  
 s_obj.get_map() 
