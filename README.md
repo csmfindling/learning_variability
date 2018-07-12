@@ -11,10 +11,10 @@ Briefly, the paper investigates the presence of variability in learning and stud
 This code offers flexible implementations in the case of Q-learning algorithms. Four big types of Q-learning algorithms are developped, obtained with combining noiseless and noisy algorithms with 1 or 2 Q-values. 
 
 Architecture of the code:
-* lib_c **C files**
-  * smc2 **C files for all smc2 procedures**
-  * state_estimation **C files for all smoothing procedures**
-  * useful_functions **file for all used C auxiliary functions**
+* lib_c - *C files*
+  * smc2 - *C files for all smc2 procedures*
+  * state_estimation - *C files for all smoothing procedures*
+  * useful_functions - *file for all used C auxiliary functions*
 * twoq_value_1alpha
   * ibis
   * smc2
