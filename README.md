@@ -78,7 +78,5 @@ A python-only code to implement inference in RL procedures with learning variabi
 
 If you have any questions on this code or related, please do not hesitate to contact me: charles.findling(at)gmail.com
 
-<h3> References </h3>
-
 
 
