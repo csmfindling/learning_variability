@@ -1,4 +1,4 @@
-<h1> Computational variability in reinforcement learning drives exploratory decisions in volatile environments </h1>
+<h1> Computational noise in reward-guided learning drives behavioral variability in volatile environments</h1>
 
 This is a project realised at Ecole Normale Supérieure by Vasilisa Skvortsova and Charles Findling under the supervisions of Valentin Wyart and Stefano Palminteri with collaborator Remi Dromnelle.
 
