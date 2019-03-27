@@ -4,7 +4,7 @@ This is a project realised at Ecole Normale Supérieure by Vasilisa Skvortsova a
 
 <h3> Link to the paper </h3>
 
-Briefly, the paper investigates the presence of variability in learning and studies its impact on behavior through computational modelling and neuroimaging procedures.
+Briefly, the paper investigates the presence of variability in learning and studies its impact on behavior through computational modelling and neuroimaging procedures. [link](https://www.biorxiv.org/content/biorxiv/early/2018/10/11/439885.full.pdf)
 
 <h3> Summary of the code </h3>
 
